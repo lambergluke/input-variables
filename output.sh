@@ -1,3 +1,3 @@
-phrase="%phrase%"
+phrase=#{phrase}#
 
-echo $phrase
+echo 'this is $phrase'
