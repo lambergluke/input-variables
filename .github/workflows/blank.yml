@@ -21,10 +21,6 @@ jobs:
         # uses: cschleiden/replace-tokens@4f7e3d67f3ff2317ae650842145cdbaefba65189
         uses: cschleiden/replace-tokens@v1.1
         with:
-          # 
-          tokenPrefix: '"%'
-          tokenSuffix: '%"'
-          # 
           files: ./output.sh
           
       - name: Run a one-line script
