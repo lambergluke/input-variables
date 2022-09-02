@@ -2,7 +2,13 @@
 
 name: Input Testing
 
-on: [workflow_dispatch]
+on: 
+  workflow_dispatch:
+    inputs:
+      phrase:
+        description: 'Phrase to say'
+        required: true
+        type: string
 
 jobs:
   Running_Script:
@@ -10,7 +16,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+      - name: Replace tokens
+        # You may pin to the exact commit or the version.
+        # uses: cschleiden/replace-tokens@4f7e3d67f3ff2317ae650842145cdbaefba65189
+        uses: cschleiden/replace-tokens@v1.1
+        with:
+          # 
+          tokenPrefix: '"%'
+          tokenSuffix: '%"'
+          # 
+          files: ./output.sh
+          
       - name: Run a one-line script
         run: |
           chmod +x ./output.sh
