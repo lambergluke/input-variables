@@ -5,7 +5,7 @@ name: Input Testing
 on: [workflow_dispatch]
 
 jobs:
-  build:
+  Running_Script:
     runs-on: ubuntu-latest
 
     steps:
