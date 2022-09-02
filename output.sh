@@ -1,1 +1,3 @@
-echo 'Hello world'
+phrase="%phrase%"
+
+echo $phrase
